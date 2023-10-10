@@ -31,7 +31,7 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona, Long> implement
             throw new Exception(e.getMessage());
         }
     }
-
+//prueba
    @Override
     public Page<Persona> search(String filtro, Pageable pageable) throws Exception {
         try {
