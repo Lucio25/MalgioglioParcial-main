@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "fba440f0-6b16-4b10-95c6-b3e3bfc574df",
+		"_postman_id": "b35c38d0-cf0f-4858-96dc-fc4c656815e7",
 		"name": "ParcialBackEnd",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "29887515"
+		"_exporter_id": "29887217"
 	},
 	"item": [
 		{
@@ -15,10 +15,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://parcial-443u.onrender.com/api/v1/personas",
+							"raw": "https://malgioglioparcial.onrender.com/api/v1/personas",
 							"protocol": "https",
 							"host": [
-								"parcial-443u",
+								"malgioglioparcial",
 								"onrender",
 								"com"
 							],
@@ -37,10 +37,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://parcial-443u.onrender.com/api/v1/personas/1",
+							"raw": "https://malgioglioparcial.onrender.com/api/v1/personas/1",
 							"protocol": "https",
 							"host": [
-								"parcial-443u",
+								"malgioglioparcial",
 								"onrender",
 								"com"
 							],
@@ -67,13 +67,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Miguel\",\r\n    \"apellido\": \"Valdivia\",\r\n    \"dni\": 123456\r\n}"
+							"raw": "{\r\n    \"nombre\": \"Lucio\",\r\n    \"apellido\": \"Fernandez\",\r\n    \"dni\": 123456\r\n}"
 						},
 						"url": {
-							"raw": "https://parcial-443u.onrender.com/api/v1/personas",
+							"raw": "https://malgioglioparcial.onrender.com/api/v1/personas",
 							"protocol": "https",
 							"host": [
-								"parcial-443u",
+								"malgioglioparcial",
 								"onrender",
 								"com"
 							],
@@ -102,12 +102,13 @@
 							"raw": "{\r\n        \"id\": 1,\r\n        \"nombre\": \"Leo\",\r\n        \"apellido\": \"Kruzliak\",\r\n        \"dni\": 123456\r\n    }"
 						},
 						"url": {
-							"raw": "http://localhost:8083/api/v1/personas/1",
-							"protocol": "http",
+							"raw": "https://malgioglioparcial.onrender.com/api/v1/personas/1",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"malgioglioparcial",
+								"onrender",
+								"com"
 							],
-							"port": "8083",
 							"path": [
 								"api",
 								"v1",
@@ -124,10 +125,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://parcial-443u.onrender.com/api/v1/personas/1",
+							"raw": "https://malgioglioparcial.onrender.com/api/v1/personas/1",
 							"protocol": "https",
 							"host": [
-								"parcial-443u",
+								"malgioglioparcial",
 								"onrender",
 								"com"
 							],
@@ -147,10 +148,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://parcial-443u.onrender.com/api/v1/personas/search?filtro=a",
+							"raw": "https://malgioglioparcial.onrender.com/api/v1/personas/search?filtro=u",
 							"protocol": "https",
 							"host": [
-								"parcial-443u",
+								"malgioglioparcial",
 								"onrender",
 								"com"
 							],
@@ -163,7 +164,7 @@
 							"query": [
 								{
 									"key": "filtro",
-									"value": "a"
+									"value": "u"
 								}
 							]
 						}
@@ -176,10 +177,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://parcial-443u.onrender.com/api/v1/personas/searchPaged?filtro=a&page=0&size=2",
+							"raw": "https://malgioglioparcial.onrender.com/api/v1/personas/searchPaged?filtro=a&page=0&size=2",
 							"protocol": "https",
 							"host": [
-								"parcial-443u",
+								"malgioglioparcial",
 								"onrender",
 								"com"
 							],
@@ -201,6 +202,47 @@
 								{
 									"key": "size",
 									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://malgioglioparcial.onrender.com/api/v1/personas/searchPage?filtro=Lucio&page=0&size=5&sort=id,asc",
+							"protocol": "https",
+							"host": [
+								"malgioglioparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"searchPage"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Lucio"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
 								}
 							]
 						}
