@@ -19,7 +19,7 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona, Long> implement
     public PersonaServiceImpl(BaseRepository<Persona, Long> baseRepository) {
         super(baseRepository);
     }
-
+//search
     @Override
     public List<Persona> search(String filtro) throws Exception {
         try {
